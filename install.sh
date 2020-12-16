@@ -23,7 +23,7 @@ REMOTE_URL=https://raw.githubusercontent.com/BenShutt/${REMOTE_REPOSITORY_NAME}/
 cd ${PATH}
 
 # Download script into `PATH`
-curl -fL --progress-bar "${REMOTE_URL}/${SCRIPT_NAME}"
+curl -O -L "${REMOTE_URL}/${SCRIPT_NAME}"
 
 # Make script executable
 chmod +x ${SCRIPT_NAME}
