@@ -8,11 +8,11 @@
 # 
 
 # Path where the script is saved
-PATH=/usr/local/bin
+PATH_DIR=/usr/local/bin
 
-# Name of the script saved to `PATH`
+# Name of the script saved to `PATH_DIR`
 SCRIPT_NAME=screxe.sh
 
-# Remove the script from `PATH`
-rm -rf "${PATH}/${SCRIPT_NAME}"
+# Remove the script from `PATH_DIR`
+rm -rf "${PATH_DIR}/${SCRIPT_NAME}"
 

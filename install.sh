@@ -8,9 +8,9 @@
 # 
 
 # Path to save the script
-PATH=/usr/local/bin
+PATH_DIR=/usr/local/bin
 
-# Name of the script to save to `PATH`
+# Name of the script to save to `PATH_DIR`
 SCRIPT_NAME=screxe.sh
 
 # Name of the remote repository
@@ -19,12 +19,20 @@ REMOTE_REPOSITORY_NAME=Screxe
 # URL of the remote repository
 REMOTE_URL=https://raw.githubusercontent.com/BenShutt/${REMOTE_REPOSITORY_NAME}/master
 
-# Move to `PATH`
-cd ${PATH}
+# Prepare clean up
+function cleanup {
+    rm -rf ${SCRIPT_NAME}
+}
 
-# Download script into `PATH`
+# Execute clean up on exit
+trap cleanup EXIT
+
+# Download script into `PATH_DIR`
 curl -O -L "${REMOTE_URL}/${SCRIPT_NAME}"
 
 # Make script executable
 chmod +x ${SCRIPT_NAME}
+
+# Move to `PATH_DIR`
+mv ${SCRIPT_NAME} ${PATH_DIR}
 
