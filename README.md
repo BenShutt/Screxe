@@ -21,17 +21,17 @@ bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master
 
 ## Scripts
 
-### [pruneLocalBranches.sh](https://github.com/BenShutt/Screxe/Scripts/pruneLocalBranches.sh)
+### [pruneLocalBranches.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/pruneLocalBranches.sh)
 Remove local branches which are `gone` on the remote. E.g. merged or deleted and no further along than another remote branch.
 
-### [removeCarthageCache.sh](https://github.com/BenShutt/Screxe/Scripts/removeCarthageCache.sh)
+### [removeCarthageCache.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/removeCarthageCache.sh)
 Remove [Carthage](https://github.com/Carthage/Carthage) cache.
 
-### [carthageFrameworkFind.sh](https://github.com/BenShutt/Screxe/Scripts/carthageFrameworkFind.sh)
+### [carthageFrameworkFind.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/carthageFrameworkFind.sh)
 List all iOS `.framework` files installed using  [Carthage](https://github.com/Carthage/Carthage).
 Execute from the root of a project.
 
-### [removeXcodeDerivedData.sh](https://github.com/BenShutt/Screxe/Scripts/removeXcodeDerivedData.sh)
+### [removeXcodeDerivedData.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/removeXcodeDerivedData.sh)
 Remove Xcode's derived data.
 
 ## Install
