@@ -19,6 +19,13 @@ REMOTE_REPOSITORY_NAME=Screxe
 # URL of the remote repository
 REMOTE_URL=https://raw.githubusercontent.com/BenShutt/${REMOTE_REPOSITORY_NAME}/master
 
+# Exit if the target file already exists (as we will be removing a file we
+# didn't download)
+if test -f "${SCRIPT_NAME}"; then
+    echo "${SCRIPT_NAME} already exists, can not execute script."
+    exit 1
+fi
+
 # Prepare clean up
 function cleanup {
     rm -rf ${SCRIPT_NAME}
