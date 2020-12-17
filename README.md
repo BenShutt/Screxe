@@ -34,6 +34,9 @@ Execute from the root of a project.
 ### [removeXcodeDerivedData.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/removeXcodeDerivedData.sh)
 Remove Xcode's derived data.
 
+### [removeXcode.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/removeXcode.sh)
+Remove Xcode from the macOSX file system.
+
 ## Install
 To install the helper script simply run:
 ```bash
