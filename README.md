@@ -11,12 +11,12 @@ For ease of use, the `screxe.sh` script can be installed (locally) in the user's
 ## Example
 With helper script:
 ```bash
-screxe.sh <scriptName>
+screxe.sh <scriptName.sh>
 ```
 
 Otherwise:
 ```bash
-bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/<scriptName>)"
+bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/<scriptName.sh>)"
 ```
 
 ## Scripts
