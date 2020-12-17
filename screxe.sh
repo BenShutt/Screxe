@@ -10,7 +10,7 @@ REMOTE_REPOSITORY_NAME=Screxe
 # URL of the remote repository (where scripts are hosted)
 REMOTE_URL=https://raw.githubusercontent.com/BenShutt/${REMOTE_REPOSITORY_NAME}/master/Scripts
 
-# Check if a first arugment is provided, other arguments will be ignored
+# Check if a first argument is provided, other arguments will be ignored
 if [ -z "$1" ]; then
     echo "USAGE: $0 <scriptName.sh>"
     exit 1
