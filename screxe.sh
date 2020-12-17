@@ -12,7 +12,7 @@ REMOTE_URL=https://raw.githubusercontent.com/BenShutt/${REMOTE_REPOSITORY_NAME}/
 
 # Check if a first arugment is provided, other arguments will be ignored
 if [ -z "$1" ]; then
-    echo "USAGE: $0 <scriptName>"
+    echo "USAGE: $0 <scriptName.sh>"
     exit 1
 fi
 
