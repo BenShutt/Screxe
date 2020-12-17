@@ -7,7 +7,7 @@
 # Name of the remote repository
 REMOTE_REPOSITORY_NAME=Screxe
 
-# URL of the remote repository (wherescripts are hosted)
+# URL of the remote repository (where scripts are hosted)
 REMOTE_URL=https://raw.githubusercontent.com/BenShutt/${REMOTE_REPOSITORY_NAME}/master/Scripts
 
 # Check if a first arugment is provided, other arguments will be ignored
