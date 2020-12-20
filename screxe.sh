@@ -19,6 +19,9 @@ FOLDER_NAME=Scripts
 # URL of the remote repository
 REMOTE_URL=https://raw.githubusercontent.com/${USER_NAME}/${REMOTE_REPOSITORY_NAME}/${BRANCH_NAME}/${FOLDER_NAME}
 
+# Extension for shell script
+SCRIPT_EXTENSION=sh
+
 # Check if a first argument is provided, other arguments will be ignored
 if [ -z "$1" ]; then
     echo "USAGE: $0 <scriptName.sh>"
@@ -27,6 +30,14 @@ fi
 
 # Name of the script to execute
 scriptName=$1
+
+# Extension of `scriptName`
+extension="${scriptName##*.}"
+
+# Suffix `SCRIPT_EXTENSION` extension to `scriptName` if it doesn't exist
+if [[ ${extension} != ${SCRIPT_EXTENSION} ]]; then
+    scriptName="${scriptName}.${SCRIPT_EXTENSION}"
+fi
 
 # URL to fetch
 url=${REMOTE_URL}/${scriptName}
