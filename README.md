@@ -9,9 +9,9 @@ These scripts are fetched from this remote when executed to ensure:
 For ease of use, the `screxe.sh` script can be installed (locally) in the user's `PATH` to be used as shorthand to fetch other scripts.
 
 ## Example
-With helper script:
+With helper script (`sh` extension may be dropped):
 ```bash
-screxe <scriptName.sh>
+screxe <scriptName>
 ```
 
 Otherwise:
