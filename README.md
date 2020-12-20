@@ -11,12 +11,12 @@ For ease of use, the `screxe.sh` script can be installed (locally) in the user's
 ## Example
 With helper script:
 ```bash
-screxe.sh <scriptName.sh>
+$ screxe <scriptName.sh>
 ```
 
 Otherwise:
 ```bash
-bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/<scriptName.sh>)"
+$ bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/<scriptName.sh>)"
 ```
 
 ## Scripts
@@ -40,17 +40,17 @@ Remove Xcode from the macOSX file system.
 ## Install
 To install the helper script simply run:
 ```bash
-bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master/install.sh)"
+$ bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master/install.sh)"
 ```
-This will run the `install.sh` script on this remote repository which saves `screxe.sh` to
+This will run the `install.sh` script on this remote repository which saves `screxe.sh` (as `screxe` executable) to
 your `PATH` (`/usr/local/bin`)
 
 ## Uninstall
 To uninstall the helper script simply run:
 ```bash
-bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master/uninstall.sh)"
+$ bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master/uninstall.sh)"
 ```
-This will run the `uninstall.sh` script on this remote repository which removes `screxe.sh` from
+This will run the `uninstall.sh` script on this remote repository which removes `screxe.sh` (as `screxe` executable) from
 your `PATH` (`/usr/local/bin`)
 
 

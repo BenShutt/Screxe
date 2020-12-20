@@ -13,11 +13,20 @@ PATH_DIR=/usr/local/bin
 # Name of the script to save to `PATH_DIR`
 SCRIPT_NAME=screxe.sh
 
+# Name of the executable
+EXECUTABLE_NAME=screxe
+
+# Name of Github user
+USER_NAME=BenShutt
+
 # Name of the remote repository
 REMOTE_REPOSITORY_NAME=Screxe
 
+# Name of remote branch
+BRANCH_NAME=master
+
 # URL of the remote repository
-REMOTE_URL=https://raw.githubusercontent.com/BenShutt/${REMOTE_REPOSITORY_NAME}/master
+REMOTE_URL=https://raw.githubusercontent.com/${USER_NAME}/${REMOTE_REPOSITORY_NAME}/${BRANCH_NAME}
 
 # Exit if the target file already exists (as we will be removing a file we
 # didn't download)
@@ -41,5 +50,9 @@ curl -O -L "${REMOTE_URL}/${SCRIPT_NAME}"
 chmod +x ${SCRIPT_NAME}
 
 # Move to `PATH_DIR`
-mv ${SCRIPT_NAME} ${PATH_DIR}
+mv ${SCRIPT_NAME} ${PATH_DIR}/${EXECUTABLE_NAME}
 
+# Echo success
+if [ $? -eq 0 ]; then
+    echo "Install complete"
+fi
