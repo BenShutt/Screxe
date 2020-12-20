@@ -14,7 +14,7 @@ REMOTE_REPOSITORY_NAME=Screxe
 BRANCH_NAME=master
 
 # Name of the folder where scripts are located
-FOLDER_NAME=scripts
+FOLDER_NAME=Scripts
 
 # URL of the remote repository
 REMOTE_URL=https://raw.githubusercontent.com/${USER_NAME}/${REMOTE_REPOSITORY_NAME}/${BRANCH_NAME}/${FOLDER_NAME}
