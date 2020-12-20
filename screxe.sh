@@ -25,5 +25,24 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
+# Name of the script to execute
+scriptName=$1
+
+# URL to fetch
+url=${REMOTE_URL}/${scriptName}
+
+# Fetch script
+curl -f ${url} >/dev/null 2>&1
+
+# Check curl
+exit_status=$?
+if [ $exit_status != 0 ]; then
+    echo "Failed to find script: ${scriptName}"
+    exit $exit_status
+fi
+
+# Echo running
+echo "Running script: ${scriptName}..."
+
 # Fetch and execute the remote script
-bash -l -c "$(curl -sfL ${REMOTE_URL}/$1)"
+bash -l -c "$(curl -sfL ${url})"
