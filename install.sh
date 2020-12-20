@@ -49,6 +49,9 @@ curl -O -L "${REMOTE_URL}/${SCRIPT_NAME}"
 # Make script executable
 chmod +x ${SCRIPT_NAME}
 
+# Uninstall previous
+bash -l -c "$(curl -sfL ${REMOTE_URL}/uninstall.sh)"
+
 # Move to `PATH_DIR`
 mv ${SCRIPT_NAME} ${PATH_DIR}/${EXECUTABLE_NAME}
 
