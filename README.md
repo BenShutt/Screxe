@@ -37,6 +37,9 @@ Remove Xcode's derived data.
 ### [removeXcode.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/removeXcode.sh)
 Remove Xcode from the macOSX file system.
 
+### [carthageBuild.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/carthageBuild.sh)
+Create a framework using Carthage build for a specified tag.
+
 ### [test.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/test.sh)
 A test script to test Screxe is successfully retrieving the script.
 
