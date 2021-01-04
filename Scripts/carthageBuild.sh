@@ -30,7 +30,6 @@ if [[ !("$response" =~ ^([yY][eE][sS]|[yY])$) ]]; then
     exit 1
 fi
 
-
 # Echo tag
 echo "Running Carthage build to create framework for tag: '${tag}'"
 
