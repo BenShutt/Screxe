@@ -1,12 +1,11 @@
 # Screxe
 
-**Screxe**: An abbreviation for "script execute".
-A remote repository containing a collection of useful scripts.
-These scripts are fetched from this remote when executed to ensure:
+**Screxe**: An abbreviation of "script execute".
+A remote repository containing a collection of useful scripts. These scripts are fetched from this remote when executed to ensure:
 1. Scripts are always up to date when executed
-2. Quick and easy to share scripts across clients/devices 
+2. Quick and easy to share scripts across clients/devices!
 
-For ease of use, the `screxe.sh` script can be installed (locally) in the user's `PATH` to be used as shorthand to fetch other scripts.
+For ease of use, the `screxe.sh` script can be installed (locally) in the user's `PATH` (`/usr/local/bin`). It's used merely as shorthand to fetch other scripts. Installing this local `screxe.sh` is slightly ironic given the purpose of this lib 😂. But it needs to be in the `PATH` to achieve the shorthand.
 
 ## Example
 With helper script (`sh` extension may be dropped):
@@ -57,6 +56,9 @@ To uninstall the helper script simply run:
 bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master/uninstall.sh)"
 ```
 This will run the `uninstall.sh` script on this remote repository which removes `screxe.sh` (as `screxe` executable) from
-your `PATH` (`/usr/local/bin`)
+your `PATH`
 
+## Updates
+The only thing that might need updating is the (local) `screxe.sh` shorthand script if this ever changes.
+To reinstall, simply run the `install.sh` script because that performs an uninstall before executing the install.
 
