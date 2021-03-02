@@ -39,6 +39,9 @@ Remove Xcode from the macOSX file system.
 ### [carthageBuild.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/carthageBuild.sh)
 Create a framework using Carthage build for a specified tag.
 
+### [list.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/list.sh)
+List the scripts on this remote.
+
 ### [test.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/test.sh)
 A test script to test Screxe is successfully retrieving the script.
 
