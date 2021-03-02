@@ -15,4 +15,5 @@ REMOTE_URL=https://raw.githubusercontent.com/${USER_NAME}/${REMOTE_REPOSITORY_NA
 # File to read
 FILE=README.md
 
+# Print remote file
 curl "${REMOTE_URL}/${FILE}"
