@@ -13,7 +13,7 @@ BRANCH_NAME=master
 REMOTE_URL=https://raw.githubusercontent.com/${USER_NAME}/${REMOTE_REPOSITORY_NAME}/${BRANCH_NAME}
 
 # File to read
-FILE=README.md
+FILE=scripts.md
 
 # Print remote file
 curl "${REMOTE_URL}/${FILE}"
