@@ -7,7 +7,7 @@ Remove local branches which are `gone` on the remote. E.g. merged or deleted and
 Remove [Carthage](https://github.com/Carthage/Carthage) cache.
 
 ### [carthageFrameworkFind.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/carthageFrameworkFind.sh)
-List all iOS `.framework` files installed using  [Carthage](https://github.com/Carthage/Carthage).
+List all iOS `.xcframework` files installed using  [Carthage](https://github.com/Carthage/Carthage).
 Execute from the root of a project.
 
 ### [removeXcodeDerivedData.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/removeXcodeDerivedData.sh)

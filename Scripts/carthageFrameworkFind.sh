@@ -7,10 +7,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 PWD=$(pwd)
 
 # Directory to search
-SEARCH_DIR=$PWD/Carthage/Build/iOS
+SEARCH_DIR=$PWD/Carthage/Build
 
 # Extension to filter on
-EXT=framework
+EXT=xcframework
 
 cd $SEARCH_DIR
 for file in *.${EXT}; do
