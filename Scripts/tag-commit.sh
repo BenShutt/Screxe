@@ -24,7 +24,7 @@ trap cleanup EXIT
 cleanup
 
 # Fetch and write remote script
-curl -s "${REMOTE_URL}" -o "${SCRIPT}"
+curl -s -H 'Cache-Control: no-cache' "${REMOTE_URL}" -o "${SCRIPT}"
 
 # Execute remote script
 sh "${SCRIPT}"
