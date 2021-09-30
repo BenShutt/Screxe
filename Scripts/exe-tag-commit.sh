@@ -13,10 +13,10 @@
 GIT_DIR=".git"
 
 # Master branch
-MASTER=master
+MASTER="master"
 
 # Develop branch
-DEVELOP=develop
+DEVELOP="develop"
 
 # Abort script if a command fails
 set -e
