@@ -12,7 +12,7 @@ REMOTE_URL="https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/${S
 # Prepare clean up
 function cleanup {
     echo "Cleaning..."
-    rm -rf ${SCRIPT}
+    rm -rf "${SCRIPT}"
 }
 
 # Clean up on exit
@@ -22,8 +22,8 @@ trap cleanup EXIT
 cleanup
 
 # Fetch and write remote script
-curl -s ${REMOTE_URL} -o "${SCRIPT}"
+curl -s "${REMOTE_URL}" -o "${SCRIPT}"
 
 # Execute remote script
-sh ${SCRIPT} $@
+sh "${SCRIPT}" $@
 
