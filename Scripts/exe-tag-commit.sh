@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Passing in as command line arguments: 
+# Prompt the user to enter: 
 #   1) A commit SHA hash
 #   2) A version number to tag. e.g. vX.Y.Z
 # 
-# then
+# then:
 # 1) Tag the given commit with the given version number
 # 2) Merge that tag into master
 # 3) Merge that tag into develop
@@ -35,16 +35,11 @@ usage() {
     fail "USAGE: ${SCRIPT_NAME} <commit> <version>" 
 }
 
-# Check command line argument count
-if [ "$#" -ne 2 ]; then
-    usage
-fi
+# Get commit hash
+read -p "Enter the commit to tag: " commit
 
-# Get commit hash from first command line argument
-commit="$1"
-
-# Get version number from second command line argument
-version="$2"
+# Get version number
+read -p "Enter the version (e.g. vX.Y.Z): " version
 
 # Check for Git repository
 if [ ! -d "${GIT_DIR}" ]; then

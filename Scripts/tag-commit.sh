@@ -1,6 +1,6 @@
 #!/bash/sh
 
-# Script to download, write, and run ${SCRIPT}. Removing it after.
+# Script to download, write, and run ${SCRIPT} removing it after.
 # This allows the script to take user input while running.
 
 # Name of script to download and run
@@ -11,9 +11,11 @@ REMOTE_URL="https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/${S
 
 # Prepare clean up
 function cleanup {
-    echo "Cleaning..."
     rm -rf "${SCRIPT}"
 }
+
+# Abort script if a command fails
+set -e
 
 # Clean up on exit
 trap cleanup EXIT
@@ -25,5 +27,5 @@ cleanup
 curl -s "${REMOTE_URL}" -o "${SCRIPT}"
 
 # Execute remote script
-sh "${SCRIPT}" $@
+sh "${SCRIPT}"
 
