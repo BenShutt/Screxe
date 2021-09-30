@@ -76,7 +76,7 @@ read -r -p "Would you like to merge ${version} into ${MASTER}? [y/N] " response
 if [[ ("$response" =~ ^([yY][eE][sS]|[yY])$) ]]; then
     git checkout ${MASTER}
     git merge ${version}
-    git push
+    git push ${ORIGIN} ${MASTER}
 fi
 
 # Prompt user to confirm they want to merge into develop
@@ -84,6 +84,6 @@ read -r -p "Would you like to merge ${version} into ${DEVELOP}? [y/N] " response
 if [[ ("$response" =~ ^([yY][eE][sS]|[yY])$) ]]; then
     git checkout ${DEVELOP}
     git merge ${version}
-    git push
+    git push ${ORIGIN} ${DEVELOP}
 fi
 
