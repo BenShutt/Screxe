@@ -44,15 +44,15 @@ echo "Found Git repository: $(pwd)"
 git fetch --dry-run
 
 # Get commit hash
-read -p "Enter the commit to tag: " commit
-
-# Get version number
-read -p "Enter the version (e.g. vX.Y.Z): " version
+read -p "Enter the commit (to tag): " commit
 
 # Check commit exists
 if ! git cat-file -e ${commit} 2> /dev/null ; then
     fatalError "Failed to find commit: '${commit}'"
 fi
+
+# Get version number
+read -p "Enter the version (e.g. vX.Y.Z): " version
 
 # Check if tag already exists
 if [ $(git tag -l "${version}") ]; then
