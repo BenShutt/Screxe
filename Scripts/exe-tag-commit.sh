@@ -23,6 +23,9 @@ MASTER="master"
 # Develop branch
 DEVELOP="develop"
 
+# Remote
+ORIGIN="origin"
+
 # Print error message and exit with failure
 fatalError() {
     echo "$1" 1>&2
@@ -63,10 +66,10 @@ if [[ !("$response" =~ ^([yY][eE][sS]|[yY])$) ]]; then
 fi
 
 # Tag the commit
-git tag -a ${version} ${commit}
+git tag ${version} ${commit}
 
 # Push the tag to the remote
-git push --tags
+git push ${ORIGIN} ${version}
 
 # Prompt user to confirm they want to merge into master
 read -r -p "Would you like to merge ${version} into ${MASTER}? [y/N] " response
