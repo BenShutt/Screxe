@@ -13,6 +13,9 @@ List the scripts on this remote.
 ### [pruneLocalBranches.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/pruneLocalBranches.sh)
 Remove local branches which are `gone` on the remote. E.g. merged or deleted and no further along than another remote branch.
 
+### [removeAndroidStudio.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/removeAndroidStudio.sh)
+Remove Android Studio from the macOSX file system.
+
 ### [removeCarthageCache.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/removeCarthageCache.sh)
 Remove [Carthage](https://github.com/Carthage/Carthage) cache.
 
