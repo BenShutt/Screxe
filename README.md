@@ -5,7 +5,7 @@ A remote repository containing a collection of useful scripts. These scripts are
 1. Scripts are always up to date when executed
 2. Quick and easy to share scripts across clients/devices!
 
-For ease of use, the `screxe.sh` script can be installed (locally) in the user's `PATH` (`/usr/local/bin`). It's used merely as shorthand to fetch other scripts. Installing this local `screxe.sh` is slightly ironic given the purpose of this lib 😂. But it needs to be in the `PATH` to achieve the shorthand.
+For ease of use, the `screxe.sh` script can be installed (locally) in the user's `PATH` (`/usr/local/bin`). It's used merely as shorthand to fetch other scripts.
 
 ## Example
 With helper script (`sh` extension may be dropped):
