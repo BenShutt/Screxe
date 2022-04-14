@@ -20,6 +20,7 @@ bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master
 
 ## Scripts
 [View scripts here](https://github.com/BenShutt/Screxe/tree/master/Scripts).
+
 Redirected to a separate markdown for reuse in the `help.sh` script.
 
 ## Install
