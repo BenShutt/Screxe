@@ -4,7 +4,7 @@
 # Script: youtube-dl.sh
 # Usage: ./youtube-dl.sh
 #
-# Prompts for a YouTube URL and downloads it as an audio file into the Music directory.
+# Prompts for a YouTube URL and downloads it as an audio file (mp3) into the Music directory.
 #
 
 # Configure defaults
@@ -22,7 +22,7 @@ GITHUB_REPOSITORY="https://github.com/ytdl-org/youtube-dl"
 COMMAND="youtube-dl"
 
 # Audio format
-AUDIO_FORMAT=mp3
+AUDIO_FORMAT="mp3"
 
 # Red color
 RED='\033[0;31m'
@@ -105,5 +105,5 @@ ${COMMAND} \
     ${youtubeUrl} 
 
 # Print success
-printGreen "Successs!"
+printGreen "Success!"
 
