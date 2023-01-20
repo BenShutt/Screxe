@@ -10,6 +10,9 @@ Execute from the root of a project.
 ### [help.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/help.sh)
 List the scripts on this remote.
 
+### [make-app-icon-images.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/make-app-icon-images.sh)
+Generate the iOS app icon images of various sizes from a 1024x1024 image. Deprecated after Xcode update. 
+
 ### [pruneLocalBranches.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/pruneLocalBranches.sh)
 Remove local branches which are `gone` on the remote. E.g. merged or deleted and no further along than another remote branch.
 
