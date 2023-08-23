@@ -10,8 +10,7 @@
 # Prompt user to confirm they want to execute this script
 read -r -p "Are you sure you want to remove Xcode? [y/N] " response
 if [[ !("$response" =~ ^([yY][eE][sS]|[yY])$) ]]; then
-    # Abort
-    echo "Aborting."
+    echo "Aborting"
     exit 1
 fi
 

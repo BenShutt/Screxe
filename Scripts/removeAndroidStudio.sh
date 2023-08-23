@@ -7,6 +7,13 @@
 # https://stackoverflow.com/questions/17625622/how-to-completely-uninstall-android-studio-on-mac
 #
 
+# Prompt user to confirm they want to execute this script
+read -r -p "Are you sure you want to remove Android Studio? [y/N] " response
+if [[ !("$response" =~ ^([yY][eE][sS]|[yY])$) ]]; then
+    echo "Aborting"
+    exit 1
+fi
+
 # Deletes the Android Studio application
 # Note that this may be different depending on what you named the application as, or whether you downloaded the preview version
 rm -rf /Applications/Android\ Studio.app
