@@ -36,3 +36,9 @@ rm -rf ~/Library/Caches/AndroidStudio*
 # Deletes older versions of Android Studio
 rm -rf ~/.AndroidStudio*
 
+rm -rf ~/.gradle  
+rm -rf ~/.android  
+rm -rf ~/Library/Android*  
+rm -rf /usr/local/var/lib/android-sdk/
+
+rm -rf ~/.emulator_console_auth_token
