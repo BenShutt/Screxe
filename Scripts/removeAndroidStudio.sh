@@ -36,9 +36,17 @@ rm -rf ~/Library/Caches/AndroidStudio*
 # Deletes older versions of Android Studio
 rm -rf ~/.AndroidStudio*
 
-rm -rf ~/.gradle  
-rm -rf ~/.android  
-rm -rf ~/Library/Android*  
+# Remove gradle related files (caches & wrapper)
+rm -rf ~/.gradle
+
+# Delete all Android Virtual Devices(AVDs) and keystores
+rm -rf ~/.android
+
+# Delete Android SDK tools
+rm -rf ~/Library/Android*
+
+# Delete local SDK
 rm -rf /usr/local/var/lib/android-sdk/
 
+# Emulator Console Auth Token
 rm -rf ~/.emulator_console_auth_token
