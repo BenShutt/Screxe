@@ -21,5 +21,8 @@ Remove Xcode from the macOSX file system.
 ### [tag-commit.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/tag-commit.sh)
 Tag a commit, merge into master, and merge into develop.
 
+### [template-macros.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/template-macros.sh)
+Generates an IDETemplateMacros.plist file in the swift package.
+
 ### [youtube-dl.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/youtube-dl.sh)
 Download the audio of a YouTube video URL.
