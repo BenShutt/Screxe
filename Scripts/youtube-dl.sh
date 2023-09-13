@@ -106,4 +106,3 @@ ${COMMAND} \
 
 # Print success
 printGreen "Success!"
-
