@@ -36,6 +36,9 @@ mkdir -p "${TMP_DIR}" && cd "${TMP_DIR}"
 # Make a new swift package
 swift package init
 
+# We need this line to generate the .swiftpm directory
+open "Package.swift"
+
 # Run script to generate the plist
 bash -l -c "$(curl -sfL "Cache-Control: no-cache" "${REMOTE_URL}")"
 

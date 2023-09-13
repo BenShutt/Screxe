@@ -11,16 +11,19 @@
 set -o nounset -o errexit -o errtrace -o pipefail
 
 # Name of the file to generate
-PLIST_FILE="IDETemplateMacros.plist"
+PLIST_FILE_NAME="IDETemplateMacros.plist"
 
 # Remote URL to the template file
-TEMPLATE_URL="https://raw.githubusercontent.com/BenShutt/Screxe/master/Resources/${PLIST_FILE}"
+TEMPLATE_URL="https://raw.githubusercontent.com/BenShutt/Screxe/master/Resources/${PLIST_FILE_NAME}"
 
 # (Relative) path to the Xcode workspace directory 
 WORKSPACE_DIR="$(pwd)/.swiftpm/xcode/package.xcworkspace"
 
 # Path to the Xcode shared data directory in the package
 SHARED_DATA_DIR="${WORKSPACE_DIR}/xcshareddata"
+
+# Path to the file to generate
+PLIST_FILE="${SHARED_DATA_DIR}/${PLIST_FILE_NAME}"
 
 # Print WORKSPACE_DIR 
 ls "$(pwd)"
@@ -39,7 +42,10 @@ packageName="${PWD##*/}"
 mkdir -p "${SHARED_DATA_DIR}" && cd "${SHARED_DATA_DIR}"
 
 # Download the template file
-curl "${TEMPLATE_URL}" -o "${PLIST_FILE}"
+curl -sfL "${TEMPLATE_URL}" -o "${PLIST_FILE}"
 
 # Replace package name
 sed -i '' "s/{packageName}/${packageName}/g" "${PLIST_FILE}"
+
+# Log success
+echo "Generated file: '${PLIST_FILE}'"
