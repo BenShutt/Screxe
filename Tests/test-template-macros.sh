@@ -16,6 +16,9 @@ TMP_DIR="/tmp/TmpSwiftPackage"
 # Path to the generated file
 PLIST_FILE="${TMP_DIR}/.swiftpm/xcode/package.xcworkspace/xcshareddata/IDETemplateMacros.plist"
 
+# Remote URL of the script
+REMOTE_URL="https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/template-macros.sh"
+
 # Prepare clean up
 function cleanup {
     rm -rf "${TMP_DIR}"
@@ -34,7 +37,7 @@ mkdir -p "${TMP_DIR}" && cd "${TMP_DIR}"
 swift package init
 
 # Run script to generate the plist
-bash -l -c "$(curl -sfL https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/template-macros.sh)"
+bash -l -c "$(curl -sfL "Cache-Control: no-cache" "${REMOTE_URL}")"
 
 # Check the file exists
 if ! [[ -f "${PLIST_FILE}}" ]]; then
