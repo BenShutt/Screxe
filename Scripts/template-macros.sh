@@ -17,10 +17,13 @@ PLIST_FILE="IDETemplateMacros.plist"
 TEMPLATE_URL="https://raw.githubusercontent.com/BenShutt/Screxe/master/Resources/${PLIST_FILE}"
 
 # (Relative) path to the Xcode workspace directory 
-WORKSPACE_DIR="./.swiftpm/xcode/package.xcworkspace"
+WORKSPACE_DIR="$(pwd)/.swiftpm/xcode/package.xcworkspace"
 
 # Path to the Xcode shared data directory in the package
 SHARED_DATA_DIR="${WORKSPACE_DIR}/xcshareddata"
+
+# Print WORKSPACE_DIR 
+echo "WORKSPACE_DIR ${WORKSPACE_DIR}"
 
 # Check that we are in the root of a swift package directory
 if [[ ! -d "${WORKSPACE_DIR}" ]]; then
