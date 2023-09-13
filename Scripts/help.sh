@@ -1,19 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Name of Github user
-USER_NAME="BenShutt"
+#
+# Script: help.sh
+# Usage: ./help.sh
+#
+# Prints the README.md of the scripts.
+#
 
-# Name of the remote repository
-REMOTE_REPOSITORY_NAME="Screxe"
-
-# Name of remote branch
-BRANCH_NAME="master"
-
-# URL of the remote repository
-REMOTE_URL="https://raw.githubusercontent.com/${USER_NAME}/${REMOTE_REPOSITORY_NAME}/${BRANCH_NAME}"
-
-# File to read
-FILE="Scripts/README.md"
+# Set defaults
+set -o nounset -o errexit -o errtrace -o pipefail
 
 # Print remote file
-curl "${REMOTE_URL}/${FILE}"
+curl "https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/README.md"
