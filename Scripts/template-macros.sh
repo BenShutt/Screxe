@@ -25,9 +25,6 @@ SHARED_DATA_DIR="${WORKSPACE_DIR}/xcshareddata"
 # Path to the file to generate
 PLIST_FILE="${SHARED_DATA_DIR}/${PLIST_FILE_NAME}"
 
-# Print WORKSPACE_DIR 
-echo "WORKSPACE_DIR ${WORKSPACE_DIR}"
-
 # Check that we are in the root of a swift package directory
 if [[ ! -d "${WORKSPACE_DIR}" ]]; then
     echo "Please run the script from the root of a Swift Package with a '${WORKSPACE_DIR}' directory." >&2
