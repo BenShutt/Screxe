@@ -1,35 +1,29 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
 #
-# screxe.sh
-# Usage example: ./screxe.sh <scriptName>
+# Script: screxe.sh
+# Usage: ./screxe.sh <scriptName>
+#
+# Executes the remote script with the given name
 #
 
-# Name of Github user
-USER_NAME=BenShutt
-
-# Name of the remote repository
-REMOTE_REPOSITORY_NAME=Screxe
-
-# Name of remote branch
-BRANCH_NAME=master
-
-# Name of the folder where scripts are located
-FOLDER_NAME=Scripts
+# Set defaults
+set -o nounset -o errexit -o errtrace -o pipefail
 
 # URL of the remote repository
-REMOTE_URL=https://raw.githubusercontent.com/${USER_NAME}/${REMOTE_REPOSITORY_NAME}/${BRANCH_NAME}/${FOLDER_NAME}
+REMOTE_URL="https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts"
 
 # Extension for shell script
-SCRIPT_EXTENSION=sh
+SCRIPT_EXTENSION="sh"
 
 # Check if a first argument is provided, other arguments will be ignored
 if [ -z "$1" ]; then
-    echo "USAGE: $0 <scriptName.sh>"
+    echo "Usage: $0 <scriptName.sh>" >&2
     exit 1
 fi
 
 # Name of the script to execute
-scriptName=$1
+scriptName="$1"
 
 # Extension of `scriptName`
 extension="${scriptName##*.}"
@@ -40,15 +34,15 @@ if [[ ${extension} != ${SCRIPT_EXTENSION} ]]; then
 fi
 
 # URL to fetch
-url=${REMOTE_URL}/${scriptName}
+url="${REMOTE_URL}/${scriptName}"
 
 # Fetch script
-curl -f ${url} >/dev/null 2>&1
+curl -f "${url}" >/dev/null 2>&1
 
 # Check curl
 exit_status=$?
 if [ $exit_status != 0 ]; then
-    echo "Failed to find script: ${scriptName}"
+    echo "Failed to find script: ${scriptName}" >&2
     exit $exit_status
 fi
 
