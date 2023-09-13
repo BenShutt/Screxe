@@ -38,7 +38,7 @@ packageName="${PWD##*/}"
 mkdir -p "${SHARED_DATA_DIR}" && cd "${SHARED_DATA_DIR}"
 
 # Download the template file
-curl "${TEMPLATE_URL}" -o "${PLIST_FILE}"
+curl -f "${TEMPLATE_URL}" -o "${PLIST_FILE}" # TODO: Fail on 404 etc
 
 # Replace package name
 sed -i '' "s/{packageName}/${packageName}/g" "${PLIST_FILE}"

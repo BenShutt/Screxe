@@ -42,16 +42,16 @@ mkdir -p ".swiftpm/xcode/package.xcworkspace"
 # Run script to generate the plist
 bash -l -c "$(curl -sfL "Cache-Control: no-cache" "${REMOTE_URL}")"
 
+# Print the file
+echo "==================== Start ===================="
+cat "${PLIST_FILE}"
+echo "==================== End ===================="
+
 # Check the file exists
 if ! [[ -f "${PLIST_FILE}}" ]]; then
     echo "Failed to find '${PLIST_FILE}' file" >&2
     exit 1
 fi
-
-# Print the file
-echo "==================== Start ===================="
-cat "${PLIST_FILE}"
-echo "==================== End ===================="
 
 # Log success
 echo "Success"
