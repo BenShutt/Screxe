@@ -1,16 +1,20 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #
-# Remove Android Studio from the MacOSX file system.
-
-# Taken from: 
-# https://stackoverflow.com/questions/17625622/how-to-completely-uninstall-android-studio-on-mac
+# Script: removeXcode.sh
+# Usage: ./removeXcode.sh
 #
+# Removes all Android studio files
+# Ref: https://stackoverflow.com/questions/17625622/how-to-completely-uninstall-android-studio-on-mac
+#
+
+# Set defaults
+set -o nounset -o errexit -o errtrace -o pipefail
 
 # Prompt user to confirm they want to execute this script
 read -r -p "Are you sure you want to remove Android Studio? [y/N] " response
 if [[ !("$response" =~ ^([yY][eE][sS]|[yY])$) ]]; then
-    echo "Aborting"
+    echo "Aborting" >&2
     exit 1
 fi
 
