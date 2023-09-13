@@ -26,7 +26,6 @@ SHARED_DATA_DIR="${WORKSPACE_DIR}/xcshareddata"
 PLIST_FILE="${SHARED_DATA_DIR}/${PLIST_FILE_NAME}"
 
 # Print WORKSPACE_DIR 
-ls "$(pwd)"
 echo "WORKSPACE_DIR ${WORKSPACE_DIR}"
 
 # Check that we are in the root of a swift package directory
@@ -42,7 +41,7 @@ packageName="${PWD##*/}"
 mkdir -p "${SHARED_DATA_DIR}" && cd "${SHARED_DATA_DIR}"
 
 # Download the template file
-curl -sfL "${TEMPLATE_URL}" -o "${PLIST_FILE}"
+curl "${TEMPLATE_URL}" -o "${PLIST_FILE}"
 
 # Replace package name
 sed -i '' "s/{packageName}/${packageName}/g" "${PLIST_FILE}"
