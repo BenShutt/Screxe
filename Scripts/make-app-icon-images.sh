@@ -60,11 +60,11 @@ function resize {
     name=${filename}-${1}${suffix}.${extension}
 
     # Use ImageMagick to reize
-    convert ${imagePath} -resize ${size}x${size} ${OUTPUT_DIR}/${name}
+    convert "${imagePath}" -resize "${size}x${size}" "${OUTPUT_DIR}/${name}"
 }
 
 # Make output directory if it doesn't exist
-mkdir -p ${OUTPUT_DIR}
+mkdir -p "${OUTPUT_DIR}"
 
 # Resize to various sizes
 resize 20 1
@@ -86,10 +86,10 @@ resize 76 1
 resize 76 2
 
 # Hardcode 83.5@2x case due to decimal
-convert ${imagePath} -resize 167x167 "$OUTPUT_DIR/${filename}-83.5@2x.${extension}"
+convert "${imagePath}" -resize 167x167 "$OUTPUT_DIR/${filename}-83.5@2x.${extension}"
 
 # Copy main image
-cp -f ${imagePath} ${OUTPUT_DIR}
+cp -f "${imagePath}" "${OUTPUT_DIR}"
 
 # Print success
 echo "Success! App icon images written to: ${OUTPUT_DIR}"

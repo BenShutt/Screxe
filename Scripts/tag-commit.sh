@@ -12,14 +12,17 @@
 set -o nounset -o errexit -o errtrace -o pipefail
 
 # Name of script to download and run
-SCRIPT="exe-tag-commit.sh"
+SCRIPT_NAME="exe-tag-commit.sh"
 
-# Remote script
-REMOTE_URL="https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/${SCRIPT}"
+# URL of the remote script
+REMOTE_URL="https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts/${SCRIPT_NAME}"
+
+# Path to the downloaded script
+TMP_SCRIPT="/tmp/${SCRIPT_NAME}"
 
 # Prepare clean up
 function cleanup {
-    rm -rf "${SCRIPT}"
+    rm -rf "${TMP_SCRIPT}"
 }
 
 # Clean up on exit
@@ -29,7 +32,7 @@ trap cleanup EXIT
 cleanup
 
 # Fetch and write remote script
-curl -s -H 'Cache-Control: no-cache' "${REMOTE_URL}" -o "${SCRIPT}"
+curl -s -H 'Cache-Control: no-cache' "${REMOTE_URL}" -o "${TMP_SCRIPT}"
 
 # Execute remote script
-sh "${SCRIPT}"
+sh "${TMP_SCRIPT}"

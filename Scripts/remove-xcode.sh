@@ -4,7 +4,7 @@
 # Script: remove-xcode.sh
 # Usage: ./remove-xcode.sh
 #
-# Removes all Xcode files.
+# Remove Xcode from the macOSX file system.
 #
 
 # Set defaults

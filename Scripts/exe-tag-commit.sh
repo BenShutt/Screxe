@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 #
-# Script: exe-tag-commit.sh <commit> <version>
+# Script: exe-tag-commit.sh
 # Usage: ./exe-tag-commit.sh
 #
-# Prompt the user to enter: 
+# Prompt the user to enter:
 #   1) A commit SHA hash
 #   2) A version number to tag. e.g. vX.Y.Z
 # 
-# then:
+# Then:
 # 1) Tag the given commit with the given version number
 # 2) Merge that tag into master
 # 3) Merge that tag into develop
@@ -31,7 +31,7 @@ ORIGIN="origin"
 
 # Print error message and exit with failure
 function fatalError {
-    echo "$1" 1>&2
+    echo "$1" >&2
     exit 1
 }
 
@@ -89,4 +89,3 @@ if [[ ("$response" =~ ^([yY][eE][sS]|[yY])$) ]]; then
     git merge ${version}
     git push ${ORIGIN} ${DEVELOP}
 fi
-
