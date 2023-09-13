@@ -23,6 +23,7 @@ WORKSPACE_DIR="$(pwd)/.swiftpm/xcode/package.xcworkspace"
 SHARED_DATA_DIR="${WORKSPACE_DIR}/xcshareddata"
 
 # Print WORKSPACE_DIR 
+ls "$(pwd)"
 echo "WORKSPACE_DIR ${WORKSPACE_DIR}"
 
 # Check that we are in the root of a swift package directory
