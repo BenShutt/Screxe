@@ -2,11 +2,11 @@
 
 #
 # Script: make-app-icon-images.sh
-# Usage: ./make-app-icon-images.sh [path/to/app-store-icon.png]
+# Usage: ./make-app-icon-images.sh <path/to/app-store-icon.png>
 # Arguments:
-# - [path/to/app-store-icon.png]: A 1024x1024 app store image
+# - <path/to/app-store-icon.png>: A 1024x1024 app store image
 #
-# Generate the app icon images of various sizes from the 1024 app store image
+# Generate the app icon images of various sizes from the 1024 app store image.
 #
 
 # Set defaults

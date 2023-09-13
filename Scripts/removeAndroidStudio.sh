@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 #
-# Script: removeXcode.sh
-# Usage: ./removeXcode.sh
+# Script: remove-android-studio.sh
+# Usage: ./remove-android-studio.sh
 #
-# Removes all Android studio files
+# Removes all Android Studio files.
 # Ref: https://stackoverflow.com/questions/17625622/how-to-completely-uninstall-android-studio-on-mac
 #
 

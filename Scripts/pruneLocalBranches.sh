@@ -1,4 +1,14 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
+#
+# Script: prune-local-branches.sh
+# Usage: ./prune-local-branches.sh
+#
+# Removes stale local branches.
+#
+
+# Set defaults
+set -o nounset -o errexit -o errtrace -o pipefail
 
 # Get present working directory
 PWD=$(pwd)

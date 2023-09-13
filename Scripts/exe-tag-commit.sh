@@ -1,6 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
 #
-# Usage: $ ./<script.sh> <commit> <version>
+# Script: exe-tag-commit.sh <commit> <version>
+# Usage: ./exe-tag-commit.sh
 #
 # Prompt the user to enter: 
 #   1) A commit SHA hash
@@ -10,9 +12,10 @@
 # 1) Tag the given commit with the given version number
 # 2) Merge that tag into master
 # 3) Merge that tag into develop
+#
 
-# Abort script if a command fails
-set -e
+# Set defaults
+set -o nounset -o errexit -o errtrace -o pipefail
 
 # Git directory
 GIT_DIR=".git"
@@ -27,7 +30,7 @@ DEVELOP="develop"
 ORIGIN="origin"
 
 # Print error message and exit with failure
-fatalError() {
+function fatalError {
     echo "$1" 1>&2
     exit 1
 }

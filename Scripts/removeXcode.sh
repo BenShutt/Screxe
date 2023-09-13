@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 #
-# Script: removeXcode.sh
-# Usage: ./removeXcode.sh
+# Script: remove-xcode.sh
+# Usage: ./remove-xcode.sh
 #
-# Removes all Xcode files
+# Removes all Xcode files.
 #
 
 # Set defaults
