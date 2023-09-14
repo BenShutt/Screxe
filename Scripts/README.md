@@ -1,5 +1,8 @@
 ## Scripts
 
+### [git-clear-cache.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/git-clear-cache.sh)
+Clear the git cache.
+
 ### [help.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/help.sh)
 List the scripts on this remote.
 
