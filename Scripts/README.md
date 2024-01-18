@@ -7,7 +7,10 @@ Clear the git cache.
 List the scripts on this remote.
 
 ### [make-app-icon-images.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/make-app-icon-images.sh)
-Generate the iOS app icon images of various sizes from a 1024x1024 image. Deprecated after Xcode update. 
+Generate the iOS app icon images of various sizes from a 1024x1024 image. Deprecated after Xcode update.
+
+### [pdf-images.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/pdf-images.sh)
+Maps PNG and HEIC files to JPG then adds all JPG (& JPEG) images in the current directory into a PDF file using ImageMagick.
 
 ### [prune-local-branches.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/prune-local-branches.sh)
 Remove local branches which are `gone` on the remote. E.g. merged or deleted and no further along than another remote branch.
