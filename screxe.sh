@@ -4,31 +4,32 @@
 # Script: screxe.sh
 # Usage: ./screxe.sh <scriptName>
 #
-# Executes the remote script with the given name
+# Executes the remote script with the given name.
+# The "sh" path extension will be appeneded if not provided.
 #
 
 # Set defaults
 set -o nounset -o errexit -o errtrace -o pipefail
 
-# URL of the remote repository
+# URL of the remote repository directory of scripts
 REMOTE_URL="https://raw.githubusercontent.com/BenShutt/Screxe/master/Scripts"
 
-# Extension for shell script
+# Extension for a shell script
 SCRIPT_EXTENSION="sh"
 
-# Check if a first argument is provided, other arguments will be ignored
-if [ -z "$1" ]; then
-    echo "Usage: $0 <scriptName.sh>" >&2
+# Ensure a first argument is provided, other arguments will be ignored
+if [ "$#" -eq 0 ] || [ "$1" == "" ]; then
+    echo "Usage: $0 <scriptName.sh>" 1>&2
     exit 1
 fi
 
 # Name of the script to execute
 scriptName="$1"
 
-# Extension of `scriptName`
+# Extension of scriptName
 extension="${scriptName##*.}"
 
-# Suffix `SCRIPT_EXTENSION` extension to `scriptName` if it doesn't exist
+# Suffix path extension to scriptName if it doesn't exist
 if [[ ${extension} != ${SCRIPT_EXTENSION} ]]; then
     scriptName="${scriptName}.${SCRIPT_EXTENSION}"
 fi
@@ -36,18 +37,11 @@ fi
 # URL to fetch
 url="${REMOTE_URL}/${scriptName}"
 
-# Fetch script
-curl -f "${url}" >/dev/null 2>&1
-
-# Check curl
-exit_status=$?
-if [ $exit_status != 0 ]; then
-    echo "Failed to find script: ${scriptName}" >&2
-    exit $exit_status
+# Check if remote URL exists, if so fetch and execute the remote script
+if curl -sfI "${url}" -o /dev/null; then
+    echo "Running script: ${scriptName}..."
+    bash -l -c "$(curl -sf ${url})"
+else
+    echo "Failed to find script: ${scriptName}" 1>&2
+    exit 1
 fi
-
-# Echo running
-echo "Running script: ${scriptName}..."
-
-# Fetch and execute the remote script
-bash -l -c "$(curl -sfL ${url})"
