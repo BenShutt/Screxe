@@ -18,6 +18,9 @@ Remove local branches which are `gone` on the remote. E.g. merged or deleted and
 ### [remove-android-studio.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/remove-android-studio.sh)
 Remove Android Studio from the macOSX file system.
 
+### [remove-spm-cache.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/remove-spm-cache.sh)
+Remove the Swift Package Manager (SPM) cache.
+
 ### [remove-xcode-derived-data.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/remove-xcode-derived-data.sh)
 Remove Xcode's derived data.
 
