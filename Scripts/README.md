@@ -1,5 +1,8 @@
 ## Scripts
 
+### [find-fonts.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/find-fonts.sh)
+Prints out the (.ttf) font files in the given directory that may mapped to, say, a Swift enum or the Info.plist.
+
 ### [git-clear-cache.sh](https://github.com/BenShutt/Screxe/blob/master/Scripts/git-clear-cache.sh)
 Clear the git cache.
 
