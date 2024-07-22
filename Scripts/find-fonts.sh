@@ -24,7 +24,7 @@ if [ ! -d "$1" ]; then
 fi
 
 # Get array of font files
-files=( $(find "$1" -maxdepth 1 -type f -name "*.ttf" -exec basename {} \;) )
+files=( $(find "$1" -maxdepth 1 -type f -name "*.ttf" -exec basename {} \; | sort) )
 
 # Print the font files in a list
 echo "==================== LIST ===================="
