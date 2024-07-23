@@ -12,19 +12,21 @@
 set -o nounset -o errexit -o errtrace -o pipefail
 
 # Check the command-line argument is provided
-if [ "$#" -ne 1 ]; then
+if (( $# != 1 )); then
     echo "Please provide a directory as a command-line argument" 1>&2
     exit 1
 fi
 
 # Check the command-line argument is a directory 
-if [ ! -d "$1" ]; then
+if [[ ! -d "$1" ]]; then
     echo "$1 is not a valid directory" 1>&2
     exit 1
 fi
 
 # Get array of font files
-files=( $(find "$1" -maxdepth 1 -type f -name "*.ttf" -exec basename {} \; | sort) )
+IFS=$'\n'
+files=($(find "$1" -maxdepth 1 -type f -name '*.ttf' -exec basename {} \; | sort))
+unset IFS
 
 # Print the font files in a list
 echo "==================== LIST ===================="
