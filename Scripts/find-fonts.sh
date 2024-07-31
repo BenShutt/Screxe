@@ -25,7 +25,7 @@ fi
 
 # Get array of font files
 IFS=$'\n'
-files=($(find "$1" -maxdepth 1 -type f -name '*.ttf' -exec basename {} \; | sort))
+files=($(find "$1" -type f -name '*.ttf' -exec basename {} \; | sort))
 unset IFS
 
 # Print the font files in a list
